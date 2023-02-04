@@ -1,0 +1,136 @@
+.h2 {
+  color: var(--color-gray-light-1);
+  font-family: "cufel" !important;
+  font-size: 3.4rem !important;
+}
+
+.ProfileInfo {
+  &List {
+    border: 2px solid white;
+    list-style: none;
+    border-radius: 0.4rem;
+    overflow: hidden;
+  }
+
+  &Item {
+    display: flex;
+    position: relative;
+
+    button {
+      position: absolute;
+      border-radius: 50%;
+      height: 1.6rem;
+      width: 1.6rem;
+      border: none;
+      color: var(--color-gray-light-1);
+      background-color: var(--color-gray-light-8);
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+    }
+
+    span {
+      display: inline-block;
+      padding: 0.8rem 1.4rem;
+      &:first-child {
+        color: var(--color-gray-light-3);
+        width: 30%;
+        background-color: var(--color-gray-light-8);
+      }
+      &:last-child {
+        width: 70%;
+        background-color: var(--color-gray-light-5);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid white;
+    }
+  }
+}
+
+.EditBtn {
+  top: 0.8rem !important;
+  right: 1rem;
+}
+
+.TwitterForm {
+  input {
+    padding-right: 3rem;
+    // width: 100%;
+    background-color: transparent;
+    border: none;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.ShareSpaceForm,
+.TwitterForm {
+  flex: 1;
+  position: relative;
+}
+
+.Error {
+  color: red;
+  margin-top: 1.4rem;
+}
+
+.CancelBtn {
+  right: 1rem;
+}
+.SubmitBtn {
+  right: -1rem;
+}
+
+.RadioLabel {
+  display: flex;
+  margin-right: 1rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  max-width: 40px;
+
+  div {
+    min-width: 20px;
+  }
+  input {
+    margin-right: 1rem;
+    height: 10px;
+  }
+}
+
+.Light {
+  h2 {
+    color: var(--color-gray-light-6);
+  }
+
+  .ProfileInfo {
+    &List {
+      border: 1px solid var(--color-gray-light-1);
+    }
+
+    &Item {
+      span {
+        &:first-child {
+          color: var(--color-gray-light-6);
+          background-color: var(--color-gray-light-3);
+        }
+        &:last-child {
+          background-color: var(--color-gray-light-2);
+        }
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+}

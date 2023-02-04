@@ -1,0 +1,40 @@
+@import "../../component/abstract/mixins";
+
+.About {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  & > :last-child {
+    margin-bottom: 2rem;
+  }
+
+  @include responde(small) {
+    padding-top: 2rem;
+  }
+}
+
+// .Description {
+//   text-align: center;
+//   margin-top: auto;
+//   margin-bottom: 2.8rem;
+//   color: #fff;
+// }
+
+.Content {
+  text-align: center;
+  margin-top: 2.8rem;
+  color: #fff;
+}
+
+.Light {
+  .Content {
+    color: var(--color-gray-light-8);
+  }
+}
+.Project{
+   background-color: #191c24 !important;
+   padding: 9px;
+}
+

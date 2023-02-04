@@ -1,0 +1,99 @@
+@import "../../component/abstract/mixins";
+
+.WalletBox {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+
+  // @include responde(small) {
+  //   margin-top: 2rem;
+  // }
+
+  .WalletList {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    border: 1px solid var(--color-gray-light-4);
+    border-radius: 0.4rem;
+    background-color: #fff;
+    padding: 0.2rem;
+    top: 3rem;
+    min-width: 300px;
+    align-items: center;
+    color: #000;
+
+    img {
+      height: 2.6rem;
+      width: auto;
+      margin-right: 0.8rem;
+      pointer-events: none;
+    }
+
+    button {
+      text-transform: uppercase;
+      font-family: sans-serif, Verdana;
+
+      border: none;
+      border-radius: 0.4rem;
+      margin: 0.2rem 0;
+      padding: 0.4rem 0.8rem;
+      font-size: 1rem;
+      display: flex;
+      &:hover {
+        background-color: var(--color-gray-light-5);
+        color: rgb(59, 58, 58);
+      }
+    }
+  }
+}
+
+.ConnectBtn {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  background-color: transparent;
+  color: #fff;
+  white-space: nowrap;
+  border: 1px solid currentColor;
+  border-radius: 0.4rem;
+  transition: background-color 0.3s;
+  // margin-bottom: 0.8rem;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.Light {
+  .ConnectBtn {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid currentColor;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 380px){
+  .ConnectBtn {
+    width: 105px;
+    text-align: center;
+    font-size: 10px;
+    padding-left: 0;
+    padding-right: 0;
+
+
+  }
+}
+
+/*
+// In light
+
+
+*/

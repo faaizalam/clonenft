@@ -1,0 +1,37 @@
+{
+    "super-admin": {
+      "allowedRoutes": [
+        "/projects",
+        "/users",
+        "/status",
+        "/project-types",
+        "/right-panel",
+        "/mint-status",
+        "/left-panel",
+        "/about"
+      ],
+      "restrictedRoutes": []
+    },
+    "admin": {
+      "allowedRoutes": [
+        "/projects",
+        "/users",
+        "/status",
+        "/project-types",
+        "/right-panel",
+        "/mint-status",
+        "/left-panel",
+        "/about"
+      ],
+      "restrictedRoutes": []
+    },
+    "manager": {
+      "allowedRoutes": ["/projects"],
+      "restrictedRoutes": []
+    },
+    "contributor": {
+      "allowedRoutes": ["/projects"],
+      "restrictedRoutes": ["/projects/create"]
+    }
+  }
+  

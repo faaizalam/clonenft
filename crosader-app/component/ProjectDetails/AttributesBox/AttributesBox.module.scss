@@ -1,0 +1,42 @@
+.Attributes {
+  color: #fff;
+  padding: 1rem;
+  border: 1px solid var(--color-gray-light-6);
+  border-radius: 0.8rem;
+  margin-bottom: 1.6rem;
+  border: 1px solid;
+  height: 443px;
+
+
+  .AttributesHeading {
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+
+    span {
+      font-size: 12px;
+      color: var(--color-gray-light-5);
+      font-weight: normalf;
+    }
+  }
+
+ 
+
+}
+
+.Light {
+  border-color: var(--color-gray-light-2);
+  .AttributesHeading {
+    color: var(--color-gray-light-8);
+
+    span {
+      color: var(--color-gray-light-5);
+    }
+  }
+}
+@media (max-width: 400px) {
+  .Attributes {
+    height: 460px !important;
+
+    /* flex-wrap: wrap; */
+  }
+}

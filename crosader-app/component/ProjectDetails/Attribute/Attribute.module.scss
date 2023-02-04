@@ -1,0 +1,70 @@
+.Attribute {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px 0px;
+  position: relative;
+
+  align-items: center;
+  font-size: 1.2rem;
+
+  .CopyButton {
+    background-color: var(--color-primary-light);
+    border: none;
+    outline: none;
+    // background-color: red !important;
+  }
+
+
+  .CopyMessage {
+    color: #fff;
+    display: inline-block;
+    padding: 0.5rem;
+    position: absolute;
+    border-radius: 0.4rem;
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-gray-light-5);
+    right: 4rem;
+    animation: fadeIn 0.5s forwards, fadeOut 0.5s 1s forwards;
+  }
+
+  &Name {
+  }
+
+  &Value {
+    text-transform: capitalize;
+    color: var(--color-gray-light-4);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 0.2rem;
+  }
+}
+
+.Light {
+  .AttributeName {
+    color: var(--color-gray-light-6);
+  }
+
+  .AttributeValue {
+    color: var(--color-gray-light-5);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,152 @@
+@import "../../component/abstract/mixins";
+
+.SearchAndTheme {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1.6rem;
+
+  @include responde(small) {
+    margin-top: 2rem;
+  }
+}
+
+.Row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.DropdownContainer {
+  color: var(--color-gray-light-1);
+  display: flex !important;
+  flex-wrap: nowrap;
+}
+
+.SortContainer {
+  display: flex;
+  gap: 10px;
+  margin-top: 1.6rem;
+  span {
+    cursor: pointer;
+  }
+}
+
+.TabMenuRow {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  color: gray;
+}
+
+.NFTs {
+  h4 {
+    margin-top: 2.4rem;
+    margin-bottom: 1.9rem;
+    text-transform: capitalize;
+    color: #fff;
+  }
+}
+
+.Light {
+  h4 {
+    color: #000;
+  }
+  .DropdownContainer {
+    color: var(--color-gray-light-8);
+  }
+
+  .ProjectsContainer {
+    color: var(--color-gray-light-8);
+
+    th {
+      text-align: left;
+      color: var(--color-gray-light-8);
+
+      cursor: pointer;
+      background-color: coral;
+    }
+
+    tr:nth-child(even) {
+      color: var(--color-gray-light-8);
+      background-color: #f1f1f1;
+    }
+    tr:nth-child(odd) {
+      color: var(--color-gray-light-8);
+      background-color: #fff;
+    }
+  }
+}
+
+.Projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 2rem;
+
+  & > :nth-child(even) {
+    justify-self: end;
+  }
+  & > :nth-child(odd) {
+    justify-self: start;
+  }
+
+  @include responde(largest) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.NoProjectFound {
+  color: var(--color-primary);
+}
+
+.Heading {
+  margin-bottom: 0 !important;
+  text-transform: capitalize;
+  color: #fff;
+}
+.ProjectsContainer {
+  // color: var(--color-gray-light-1);
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.8em;
+    border: none;
+
+    th {
+      text-align: right;
+      cursor: pointer;
+      color: var(--color-gray-light-1);
+      background-color: #000;
+    }
+    th:first-child {
+      text-align: left;
+    }
+
+    td {
+      min-width: 50px;
+      text-align: right;
+    }
+    td:first-child {
+      cursor: pointer;
+      text-align: left;
+    }
+    td:first-child:hover {
+      text-decoration: underline;
+    }
+
+    tr:nth-child(even) {
+      color: var(--color-gray-light-1);
+      background-color: var(--color-gray-light-5);
+    }
+    tr:nth-child(odd) {
+      color: var(--color-gray-light-1);
+      background-color: transparent;
+    }
+  }
+}
+
+// @media(max-width:400){
+//   .Index_Projects__TjhWO >div>img{
+//     width: 150px;
+//   }
+
+// }

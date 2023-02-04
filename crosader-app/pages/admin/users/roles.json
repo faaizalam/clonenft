@@ -1,0 +1,6 @@
+[
+    { "name": "Admin", "_id": "admin" },
+    { "name": "Contributer", "_id": "contributor" },
+    { "name": "Manager", "_id": "manager" }
+  ]
+  

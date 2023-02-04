@@ -1,0 +1,76 @@
+.ProjectInCalendar {
+  width: 100%;
+  display: flex;
+  grid-row-gap: 0.4rem;
+  justify-items: start;
+  flex-direction: column;
+  padding: 1rem 1.6rem;
+  border: none;
+  background-color: var(--color-gray-light-6);
+  color: var(--color-gray-light-1);
+  border-left: 2px solid var(--color-gray-light-4);
+  cursor: pointer;
+
+  div {
+    display: flex;
+    width: 100%;
+  }
+
+  & > :nth-child(2) {
+    p {
+      white-space: nowrap;
+    }
+  }
+
+  & > :nth-child(1) {
+    :first-child {
+      max-width: 180px;
+      min-width: 180px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 700;
+      text-align: left;
+    }
+  }
+
+  & div > :nth-child(even) {
+    text-align: right;
+    justify-self: flex-end;
+  }
+
+  & > :last-child {
+    color: var(--color-gray-light-2);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.Primary {
+  background-color: var(--color-primary);
+  border-left: 2px solid var(--color-primary-light-1);
+}
+
+.Light {
+  background-color: var(--color-gray-light-2);
+  color: var(--color-gray-light-6);
+  border-left: 2px solid var(--color-gray-light-5);
+  cursor: pointer;
+
+  & > :last-child {
+    color: var(--color-gray-light-4);
+  }
+}
+
+.Light.Primary {
+  background-color: var(--color-primary-light-1);
+  color: var(--color-gray-light-8);
+  border-left: 2px solid var(--color-primary);
+  cursor: pointer;
+
+  & > :last-child {
+    color: var(--color-gray-light-6);
+  }
+}

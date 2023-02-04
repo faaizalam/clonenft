@@ -1,0 +1,46 @@
+.LoadingScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // position: absolute;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  // backdrop-filter: blur(6px);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  animation: glow 3000ms ease-in-out infinite;
+  transform: translateY(280px);
+
+  img {
+    position: absolute;
+    width: 200px;
+    
+    // transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    animation: glow 3000ms ease-in-out infinite;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  .pdiv{
+    color: white;
+    position: absolute;
+    
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
